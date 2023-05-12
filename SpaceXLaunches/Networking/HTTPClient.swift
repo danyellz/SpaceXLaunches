@@ -13,7 +13,7 @@ struct HTTPClient {
 	private static let host = "api.spacexdata.com"
 
 	enum HTTPRequest {
-		case launches(limit: Int, offset: Int)
+		case launches(limit: Int, offset: Int, year: Int)
 
 		private var mainPath: String {
 			switch self {
@@ -24,10 +24,11 @@ struct HTTPClient {
 
 		private var queryItems: [URLQueryItem] {
 			switch self {
-			case .launches(let limit, let offset):
+			case .launches(let limit, let offset, let year):
 				return [
 					URLQueryItem(name: "limit", value: "\(limit)"),
-					URLQueryItem(name: "offset", value: "\(offset)")
+					URLQueryItem(name: "offset", value: "\(offset)"),
+					URLQueryItem(name: "launch_year", value: "\(year)")
 				]
 			}
 		}
@@ -42,7 +43,7 @@ struct HTTPClient {
 		}
 
 		var requestURL: URL? {
-            return urlComponents.url
+			return urlComponents.url
 		}
 	}
 }
