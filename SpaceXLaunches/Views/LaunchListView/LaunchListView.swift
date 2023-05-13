@@ -20,7 +20,13 @@ struct LaunchListView: View {
 
 					Text(launch.mission_name)
 						.padding()
+
 					Spacer()
+
+					Text(launch.launch_success ? "Launch" : "Failure")
+						.padding(.horizontal, 8)
+						.background(launch.launch_success ? Color.green : Color.red)
+						.clipShape(Capsule())
 				}
 			}
 
