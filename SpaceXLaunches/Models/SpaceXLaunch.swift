@@ -24,7 +24,7 @@ struct SpaceXLaunch: Codable {
 
 extension SpaceXLaunch: Identifiable {
 	var id: String {
-		mission_name
+		UUID().uuidString
 	}
 }
 

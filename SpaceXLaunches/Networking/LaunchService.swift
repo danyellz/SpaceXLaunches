@@ -7,12 +7,12 @@
 
 import Foundation
 
-/// - Service used for fetching and returning image metadata publishers of Decodable result types.
+/// - Service used for fetching and returning launch data AnyPublishers of Decodable response types.
 class LaunchService {
 	private var networkProvider = Dependencies.shared.resolve(type: NetworkProvider.self)!
 	
-	func getImageList(offset: Int) -> NetworkProvider.RESTPublisher<[SpaceXLaunch]> {
-		let url = HTTPClient.HTTPRequest.launches(limit: 20, offset: offset, year: 2023).requestURL!
+	func getLaunchList(offset: Int) -> NetworkProvider.RESTPublisher<[SpaceXLaunch]> {
+		let url = HTTPClient.HTTPRequest.launches(limit: 20, offset: offset).requestURL!
 		
 		return networkProvider.requestData(url: url)
 			.eraseToAnyPublisher()

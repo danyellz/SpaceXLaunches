@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C9A4ECC2A0EF64100B54C65 /* SpaceXLaunchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4ECB2A0EF64100B54C65 /* SpaceXLaunchesApp.swift */; };
-		1C9A4ECE2A0EF64100B54C65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4ECD2A0EF64100B54C65 /* ContentView.swift */; };
+		1C9A4ECE2A0EF64100B54C65 /* LaunchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4ECD2A0EF64100B54C65 /* LaunchListView.swift */; };
 		1C9A4ED02A0EF64200B54C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9A4ECF2A0EF64200B54C65 /* Assets.xcassets */; };
 		1C9A4ED32A0EF64200B54C65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9A4ED22A0EF64200B54C65 /* Preview Assets.xcassets */; };
 		1C9A4EDD2A0EF64200B54C65 /* SpaceXLaunchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4EDC2A0EF64200B54C65 /* SpaceXLaunchesTests.swift */; };
@@ -20,6 +20,7 @@
 		1C9A4F002A0EF8F000B54C65 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4EFF2A0EF8F000B54C65 /* DIContainer.swift */; };
 		1C9A4F032A0EFA7C00B54C65 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F022A0EFA7C00B54C65 /* SpaceXLaunch.swift */; };
 		1C9A4F052A0EFFD200B54C65 /* SpaceXRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F042A0EFFD200B54C65 /* SpaceXRocket.swift */; };
+		1C9A4F092A0F01B500B54C65 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F082A0F01B500B54C65 /* LaunchListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* Begin PBXFileReference section */
 		1C9A4EC82A0EF64100B54C65 /* SpaceXLaunches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXLaunches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9A4ECB2A0EF64100B54C65 /* SpaceXLaunchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunchesApp.swift; sourceTree = "<group>"; };
-		1C9A4ECD2A0EF64100B54C65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C9A4ECD2A0EF64100B54C65 /* LaunchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListView.swift; sourceTree = "<group>"; };
 		1C9A4ECF2A0EF64200B54C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C9A4ED22A0EF64200B54C65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C9A4ED82A0EF64200B54C65 /* SpaceXLaunchesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXLaunchesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +57,8 @@
 		1C9A4EFF2A0EF8F000B54C65 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		1C9A4F022A0EFA7C00B54C65 /* SpaceXLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXLaunch.swift; sourceTree = "<group>"; };
 		1C9A4F042A0EFFD200B54C65 /* SpaceXRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRocket.swift; sourceTree = "<group>"; };
+		1C9A4F082A0F01B500B54C65 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
+		1C9A4F0A2A0F062100B54C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,9 @@
 		1C9A4ECA2A0EF64100B54C65 /* SpaceXLaunches */ = {
 			isa = PBXGroup;
 			children = (
+				1C9A4F0A2A0F062100B54C65 /* Info.plist */,
 				1C9A4ECB2A0EF64100B54C65 /* SpaceXLaunchesApp.swift */,
-				1C9A4ECD2A0EF64100B54C65 /* ContentView.swift */,
+				1C9A4F062A0F015700B54C65 /* Views */,
 				1C9A4ECF2A0EF64200B54C65 /* Assets.xcassets */,
 				1C9A4EFE2A0EF8F000B54C65 /* DependencyInjection */,
 				1C9A4F012A0EFA7C00B54C65 /* Models */,
@@ -167,6 +171,23 @@
 				1C9A4F042A0EFFD200B54C65 /* SpaceXRocket.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1C9A4F062A0F015700B54C65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C9A4F072A0F016B00B54C65 /* LaunchListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C9A4F072A0F016B00B54C65 /* LaunchListView */ = {
+			isa = PBXGroup;
+			children = (
+				1C9A4ECD2A0EF64100B54C65 /* LaunchListView.swift */,
+				1C9A4F082A0F01B500B54C65 /* LaunchListViewModel.swift */,
+			);
+			path = LaunchListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9A4ECE2A0EF64100B54C65 /* ContentView.swift in Sources */,
+				1C9A4ECE2A0EF64100B54C65 /* LaunchListView.swift in Sources */,
 				1C9A4F052A0EFFD200B54C65 /* SpaceXRocket.swift in Sources */,
 				1C9A4F032A0EFA7C00B54C65 /* SpaceXLaunch.swift in Sources */,
+				1C9A4F092A0F01B500B54C65 /* LaunchListViewModel.swift in Sources */,
 				1C9A4EFB2A0EF69100B54C65 /* HTTPClient.swift in Sources */,
 				1C9A4EFD2A0EF87D00B54C65 /* LaunchService.swift in Sources */,
 				1C9A4EFA2A0EF69100B54C65 /* NetworkProvider.swift in Sources */,
@@ -468,7 +490,7 @@
 				DEVELOPMENT_TEAM = 9944L4LTM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SpaceXLaunches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -497,7 +519,7 @@
 				DEVELOPMENT_TEAM = 9944L4LTM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SpaceXLaunches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

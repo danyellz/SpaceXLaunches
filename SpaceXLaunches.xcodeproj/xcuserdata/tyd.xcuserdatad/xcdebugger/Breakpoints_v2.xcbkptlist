@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5CC779DE-28C4-44FD-A12D-AFC35377C65D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C92ADF0A-AB77-40F6-AD30-BE72471DAA7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getLaunchList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C92ADF0A-AB77-40F6-AD30-BE72471DAA7E - c0af69a61a929115"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "C92ADF0A-AB77-40F6-AD30-BE72471DAA7E - 8750c00f152501b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "C92ADF0A-AB77-40F6-AD30-BE72471DAA7E - 6d9150adf86a55d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;SpaceXLaunches.SpaceXLaunch&gt;) -&gt; () in SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35D99570-44F3-458D-ADC0-479E2771CFEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getLaunchList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35D99570-44F3-458D-ADC0-479E2771CFEF - c0af69a61a9292ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "35D99570-44F3-458D-ADC0-479E2771CFEF - c0af69a61a9292ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "820">
+               </Location>
+               <Location
+                  uuid = "35D99570-44F3-458D-ADC0-479E2771CFEF - 8750c00f15250288"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in SpaceXLaunches.LaunchListViewModel.getLaunchList() -&gt; ()"
+                  moduleName = "SpaceXLaunches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tyd/Desktop/Dev/SpaceXLaunches/SpaceXLaunches/Views/LaunchListView/LaunchListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
