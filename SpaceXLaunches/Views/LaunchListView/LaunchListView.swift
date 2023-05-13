@@ -15,6 +15,7 @@ struct LaunchListView: View {
 			headerView
 			launchListView
 		}
+		.preferredColorScheme(.dark)
 		.onAppear {
 			viewModel.getLaunchList()
 		}
@@ -29,7 +30,8 @@ struct LaunchListView: View {
 				.frame(maxWidth: .infinity, maxHeight: 200)
 			}
 		} else {
-			EmptyView()
+			Rectangle()
+				.frame(height: .zero)
 		}
 	}
 
@@ -53,14 +55,17 @@ struct LaunchListView: View {
 					Spacer()
 				}
 			}
+
+			Spacer(minLength: 32)
 		}
+		.listStyle(.plain)
 	}
 
 	private func launchRow(launch: SpaceXLaunch) -> some View {
 		Button(action: { viewModel.selectLaunch(id: launch.id) }) {
 			HStack {
 				if let imageURL = launch.imageURL {
-					CacheImageView(imageURL: imageURL, referenceFrame: 48)
+					CacheImageView(imageURL: imageURL, referenceFrame: 40)
 				}
 
 				Text(launch.mission_name)
@@ -84,6 +89,7 @@ struct LaunchListView: View {
 			}
 		}
 		.tint(.white)
+		.frame(height: 56)
 	}
 }
 

@@ -119,10 +119,10 @@
 				1C9A4ECB2A0EF64100B54C65 /* SpaceXLaunchesApp.swift */,
 				1C9A4ECF2A0EF64200B54C65 /* Assets.xcassets */,
 				1C9A4F0F2A0F0C2400B54C65 /* CommonViews */,
-				1C9A4F062A0F015700B54C65 /* Views */,
 				1C9A4EFE2A0EF8F000B54C65 /* DependencyInjection */,
 				1C9A4F012A0EFA7C00B54C65 /* Models */,
 				1C9A4EF52A0EF69100B54C65 /* Networking */,
+				1C9A4F062A0F015700B54C65 /* Views */,
 				1C9A4ED12A0EF64200B54C65 /* Preview Content */,
 			);
 			path = SpaceXLaunches;
