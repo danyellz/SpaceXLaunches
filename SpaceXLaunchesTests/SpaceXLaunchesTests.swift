@@ -6,31 +6,77 @@
 //
 
 import XCTest
+import Combine
 @testable import SpaceXLaunches
 
-final class SpaceXLaunchesTests: XCTestCase {
+final class SpaceXLaunchTests: XCTestCase {
+	var mockViewModel: LaunchListViewModel!
+	private var cancellables = Set<AnyCancellable>()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+	override func setUpWithError() throws {
+		try super.setUpWithError()
+		Dependencies.shared.register(type: NetworkProvider.self, component: MockNetworkProvider())
+	}
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+	func testViewModelDataModeling() {
+		let expectation = XCTestExpectation(description: "Data was fetched")
+		mockViewModel = LaunchListViewModel()
+		mockViewModel.getLaunchList()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+		mockViewModel.$launchList.sink(receiveValue: { result in
+			guard !result.isEmpty else { return }
+			expectation.fulfill()
+		})
+		.store(in: &cancellables)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+		wait(for: [expectation], timeout: 5)
+		XCTAssertEqual(mockViewModel.launchList.count, 2)
+	}
+}
 
+class MockNetworkProvider: NetworkProvider {
+	override func makeDataRequest(_ urlRequest: URLRequest) -> RESTPublisher<Data> {
+		let json: [[String: Any]] = [
+			[
+				"mission_name": "Falcon",
+				"rocket": [
+					"first_stage": [
+						"cores": [
+							[
+								"land_success": true
+							]
+						]
+					]
+				],
+				"launch_success": true,
+				"links": [
+					"mission_patch_small": "https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"
+				]
+			],
+			[
+				"mission_name": "Falcon-Heavy",
+				"rocket": [
+					"first_stage": [
+						"cores": [
+							[
+								"land_success": true
+							]
+						]
+					]
+				],
+				"launch_success": true,
+				"links": [
+					"mission_patch_small": "https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"
+				]
+			]
+		]
+
+		let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+		let response = HTTPURLResponse(url: urlRequest.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
+		return Just((data: jsonData, response: response))
+			.tryMap { data, response -> Data in
+				return data
+			}
+			.eraseToAnyPublisher()
+	}
 }
