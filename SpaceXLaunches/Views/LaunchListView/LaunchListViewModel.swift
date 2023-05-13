@@ -30,6 +30,7 @@ class LaunchListViewModel: ObservableObject {
 
 		launchService.getLaunchList(offset: offset)
 		.receive(on: DispatchQueue.main)
+		.delay(for: 1, scheduler: DispatchQueue.main)
 		.sink(receiveCompletion: { [unowned self] result in
 			switch result {
 			case .failure(let error):

@@ -13,20 +13,25 @@ struct LaunchListView: View {
     var body: some View {
 		List {
 			ForEach(viewModel.launchList) { launch in
-				Text(launch.mission_name)
+				HStack {
+					if let imageURL = launch.imageURL {
+						CacheImageView(imageURL: imageURL, referenceFrame: 48)
+					}
+
+					Text(launch.mission_name)
+						.padding()
+					Spacer()
+				}
 			}
 
 			if viewModel.isReadyForPaging {
-				Rectangle()
-					.background(Color.clear)
+				ProgressView()
+					.progressViewStyle(CircularProgressViewStyle(tint: .white))
 					.onAppear {
 						viewModel.getLaunchList()
 					}
 			}
-			
 		}
-		.background(Color.white)
-        .padding()
 		.onAppear {
 			viewModel.getLaunchList()
 		}
