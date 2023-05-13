@@ -31,8 +31,8 @@ class LaunchListViewModel: ObservableObject {
 		isReadyForPaging = false
 
 		launchService.getLaunchList(offset: offset)
-		.delay(for: 1, scheduler: DispatchQueue.main)
 		.receive(on: DispatchQueue.main)
+		.delay(for: launchList.isEmpty ? .zero : 1, scheduler: DispatchQueue.main)
 		.sink(receiveCompletion: { [unowned self] result in
 			switch result {
 			case .failure(let error):

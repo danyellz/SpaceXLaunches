@@ -48,15 +48,13 @@ struct LaunchListView: View {
 				HStack {
 					Spacer()
 					ProgressView()
-						.progressViewStyle(CircularProgressViewStyle(tint: .blue))
+						.progressViewStyle(CircularProgressViewStyle(tint: .white))
 						.onAppear {
 							viewModel.getLaunchList()
 						}
 					Spacer()
 				}
 			}
-
-			Spacer(minLength: 32)
 		}
 		.listStyle(.plain)
 	}
