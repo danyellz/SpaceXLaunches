@@ -22,7 +22,7 @@ class LaunchListViewModel: ObservableObject {
 
 	// MARK: - Bound view properties
 
-	@Published var launchSelected = false
+	@Published var showHeader = false
 	@Published var launchList: [SpaceXLaunch] = []
 	@Published var isErrorShowing = false
 
@@ -52,7 +52,7 @@ class LaunchListViewModel: ObservableObject {
 	func selectLaunch(id: String) {
 		guard let selectedLaunch = launchList.first(where: { $0.id == id }) else { return }
 		createTelemetry(selectedLaunch: selectedLaunch)
-		launchSelected = !selectedTelemetry.isEmpty
+		showHeader = !selectedTelemetry.isEmpty
 	}
 
 	private func createTelemetry(selectedLaunch: SpaceXLaunch) {
