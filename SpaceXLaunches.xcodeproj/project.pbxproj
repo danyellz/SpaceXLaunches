@@ -23,6 +23,7 @@
 		1C9A4F092A0F01B500B54C65 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F082A0F01B500B54C65 /* LaunchListViewModel.swift */; };
 		1C9A4F0D2A0F0BAA00B54C65 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C9A4F0C2A0F0BAA00B54C65 /* Kingfisher */; };
 		1C9A4F112A0F0C3E00B54C65 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F102A0F0C3E00B54C65 /* CacheImageView.swift */; };
+		1C9A4F132A0F1A5C00B54C65 /* TelemetryLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A4F122A0F1A5C00B54C65 /* TelemetryLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		1C9A4F082A0F01B500B54C65 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		1C9A4F0A2A0F062100B54C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1C9A4F102A0F0C3E00B54C65 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
+		1C9A4F122A0F1A5C00B54C65 /* TelemetryLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				1C9A4F102A0F0C3E00B54C65 /* CacheImageView.swift */,
+				1C9A4F122A0F1A5C00B54C65 /* TelemetryLineView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				1C9A4F092A0F01B500B54C65 /* LaunchListViewModel.swift in Sources */,
 				1C9A4EFB2A0EF69100B54C65 /* HTTPClient.swift in Sources */,
 				1C9A4EFD2A0EF87D00B54C65 /* LaunchService.swift in Sources */,
+				1C9A4F132A0F1A5C00B54C65 /* TelemetryLineView.swift in Sources */,
 				1C9A4EFA2A0EF69100B54C65 /* NetworkProvider.swift in Sources */,
 				1C9A4F002A0EF8F000B54C65 /* DIContainer.swift in Sources */,
 				1C9A4ECC2A0EF64100B54C65 /* SpaceXLaunchesApp.swift in Sources */,
