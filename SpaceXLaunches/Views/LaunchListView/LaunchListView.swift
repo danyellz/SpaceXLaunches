@@ -69,36 +69,40 @@ struct LaunchListView: View {
 
 	private func launchRow(launch: SpaceXLaunch) -> some View {
 		Button(action: { viewModel.selectLaunch(id: launch.id) }) {
-			HStack(alignment: .top) {
-				if let imageURL = launch.imageURL {
-					CacheImageView(imageURL: imageURL, referenceFrame: 40)
-				}
+			VStack(alignment: .leading) {
+				HStack(alignment: .center) {
+					if let imageURL = launch.imageURL {
+						CacheImageView(imageURL: imageURL, referenceFrame: 40)
+					}
 
-				VStack(alignment: .leading, spacing: 2) {
 					Text(launch.mission_name)
 						.font(.title2.bold())
-					Text(launch.details ?? "No Details")
-						.lineLimit(nil)
-						.fixedSize(horizontal: false, vertical: true)
-						.font(.footnote)
-				}
-				.padding(.horizontal)
+						.padding(.leading, 4)
+					Spacer()
 
-				Spacer()
-
-				VStack(spacing: 4) {
-					Text(launch.launch_success ? "Launch" : "BOOM")
-						.padding(.horizontal, 8)
-						.background(launch.launch_success ? Color.green : Color.red)
-						.clipShape(Capsule())
-
-					if launch.landSuccess == true {
-						Text("Landed")
+					VStack(spacing: 4) {
+						Text(launch.launch_success ? "Launch" : "BOOM")
+							.font(.footnote.bold())
+							.foregroundColor(.black)
 							.padding(.horizontal, 8)
-							.background(Color.blue)
+							.background(launch.launch_success ? Color.green : Color.red)
 							.clipShape(Capsule())
+
+						if launch.landSuccess == true {
+							Text("Landed")
+								.font(.footnote.bold())
+								.foregroundColor(.black)
+								.padding(.horizontal, 8)
+								.background(Color.blue)
+								.clipShape(Capsule())
+						}
 					}
 				}
+
+				Text(launch.details ?? "No Details")
+					.lineLimit(nil)
+					.fixedSize(horizontal: false, vertical: true)
+					.font(.footnote)
 			}
 		}
 		.tint(.white)
