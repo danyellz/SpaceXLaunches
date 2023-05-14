@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LaunchListView: View {
 	@ObservedObject var viewModel = LaunchListViewModel()
-	
+
     var body: some View {
 		VStack {
 			headerView
@@ -19,6 +19,9 @@ struct LaunchListView: View {
 		.onAppear {
 			viewModel.getLaunchList()
 		}
+		.alert(viewModel.errorMessage, isPresented: $viewModel.isErrorShowing) {
+			Button("OK", role: .cancel) {}
+		}
     }
 
 	 @ViewBuilder private var headerView: some View {
@@ -27,8 +30,9 @@ struct LaunchListView: View {
 				return VStack(alignment: .center) {
 					TelemetryLineView(circleRelativeCenters: viewModel.selectedTelemetry)
 				}
-				.frame(maxWidth: .infinity, maxHeight: 200)
 			}
+			.frame(height: 200)
+			.zIndex(0)
 		} else {
 			Rectangle()
 				.frame(height: .zero)
@@ -40,7 +44,10 @@ struct LaunchListView: View {
 			ForEach(viewModel.launchList) { launch in
 				launchRow(launch: launch)
 					.onAppear {
-						viewModel.showHeader = false
+						withAnimation {
+							guard viewModel.isReadyForPaging else { return }
+							viewModel.showHeader = false
+						}
 					}
 			}
 
@@ -57,17 +64,25 @@ struct LaunchListView: View {
 			}
 		}
 		.listStyle(.plain)
+		.zIndex(1)
 	}
 
 	private func launchRow(launch: SpaceXLaunch) -> some View {
 		Button(action: { viewModel.selectLaunch(id: launch.id) }) {
-			HStack {
+			HStack(alignment: .top) {
 				if let imageURL = launch.imageURL {
 					CacheImageView(imageURL: imageURL, referenceFrame: 40)
 				}
 
-				Text(launch.mission_name)
-					.padding()
+				VStack(alignment: .leading, spacing: 2) {
+					Text(launch.mission_name)
+						.font(.title2.bold())
+					Text(launch.details ?? "No Details")
+						.lineLimit(nil)
+						.fixedSize(horizontal: false, vertical: true)
+						.font(.footnote)
+				}
+				.padding(.horizontal)
 
 				Spacer()
 
@@ -87,7 +102,7 @@ struct LaunchListView: View {
 			}
 		}
 		.tint(.white)
-		.frame(height: 56)
+		.frame(minHeight: 56)
 	}
 }
 

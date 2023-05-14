@@ -9,6 +9,7 @@ import Foundation
 
 struct SpaceXLaunch: Codable {
 	let mission_name: String
+	let details: String?
 	let rocket: SpaceXRocket
 	let launch_success: Bool
 	let links: SpaceXImageLinks
